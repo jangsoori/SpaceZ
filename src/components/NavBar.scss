@@ -1,0 +1,43 @@
+@import "../style_utilities/mixins";
+.navbar-container {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+  color: white;
+  .navbar-items {
+    display: flex;
+    list-style: none;
+
+    .navbar-item {
+      margin-right: 3vw;
+      font-size: 1.7vw;
+      letter-spacing: 0.2rem;
+      position: relative;
+      .item-active::after {
+        @include nav-link-underline;
+        width: 100%;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+
+      &:after {
+        @include nav-link-underline;
+        width: 0%;
+      }
+    }
+  }
+  .navbar-logo {
+    margin-left: 3vw;
+    font-size: 2vw;
+    font-weight: bold;
+  }
+
+  .nav-icon-mobile {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+}

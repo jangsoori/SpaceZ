@@ -1,0 +1,16 @@
+@import "../style_utilities/mixins";
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  @include portraitMediaQuery;
+  .content {
+    margin-top: 5%;
+    .about-text {
+      font-size: 3.5vw;
+    }
+    .input-field {
+      textarea {
+        height: 10vh;
+      }
+    }
+  }
+}

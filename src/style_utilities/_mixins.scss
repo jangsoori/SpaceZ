@@ -1,0 +1,118 @@
+@import "../style_utilities/colors"; //Active link and hover navbar link style
+@mixin nav-link-underline {
+  content: "";
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+//Media query
+@mixin portraitMediaQuery {
+  .page-container {
+    background: url(../images/sun-portrait.svg) no-repeat center center / cover;
+    position: relative;
+  }
+  .rocket {
+    height: 30vh;
+    margin: 0 auto;
+    left: 0;
+  }
+  //NAVBAR
+  .navbar-container {
+    width: 100%;
+    justify-content: center;
+    color: black;
+    // position: relative;
+    .navbar-items {
+      position: absolute;
+      flex-direction: column;
+      .navbar-item {
+        font-size: 6vw;
+      }
+    }
+    .navbar-logo {
+      color: white;
+      position: absolute;
+      bottom: 30vh;
+      right: 50%;
+      transform: translateX(50%);
+      font-size: 5vh;
+    }
+  }
+  ///
+  .content {
+    margin-top: 2rem;
+
+    .content-pages {
+      margin: 0;
+      width: 100vw;
+      align-items: flex-start;
+    }
+  }
+
+  //HOME PAGE
+  .home {
+    // margin-top: 5vw;
+    .home-hero-image {
+      order: 3;
+      width: 100%;
+    }
+
+    .home-hero-text {
+      margin-top: 0;
+      margin-bottom: 5vw;
+    }
+    .hero-text-big {
+      font-size: 8vw;
+    }
+    .hero-text-small {
+      font-size: 6vw;
+    }
+    .cta-button {
+      padding: 4vw 7vw;
+      font-size: 5vw;
+      border-radius: 6vw 0;
+      margin-bottom: 7vw;
+    }
+  }
+  //ABOUT PAGE
+  .about {
+    width: 100%;
+    justify-self: center;
+    padding: 0 1rem;
+  }
+  .about-text {
+    font-size: 4vw;
+  }
+
+  //CONTACT PAGE
+  .contact-form {
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .form-title {
+    font-size: 8vw;
+  }
+
+  .input-field {
+    label {
+      font-size: 3vw;
+    }
+    input,
+    textarea {
+      font-size: 3vw;
+      padding: 1vw 2vw;
+    }
+    textarea {
+      height: 15vh;
+    }
+  }
+  .btn-submit {
+    font-size: 3vw;
+    padding: 2vw 4vw;
+  }
+}

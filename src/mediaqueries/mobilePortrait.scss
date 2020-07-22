@@ -1,0 +1,5 @@
+@import "../style_utilities/mixins";
+
+@media only screen and (max-width: 420px) {
+  @include portraitMediaQuery;
+}

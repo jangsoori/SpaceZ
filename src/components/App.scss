@@ -1,0 +1,10 @@
+@import "../style_utilities/_colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+.page-container {
+  background: url(../images/sun.svg) no-repeat center center / cover;
+  height: 100vh;
+  font-family: "Montserrat", "sans-serif";
+  display: flex;
+  flex-direction: column;
+}
