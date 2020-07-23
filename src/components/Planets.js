@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "./Planets.scss";
 export default function Planets(props) {
   return (
     <svg
@@ -13,7 +13,7 @@ export default function Planets(props) {
       <circle cx="116.5" cy="15.5" r="14.5" fill="#EAD6B8" />
       <circle cx="180.5" cy="15.5" r="15.5" fill="#EAD6B8" />
       <circle
-        // className={props.hover ? `mars active` : "mars"}
+        className={props.hover ? `mars active` : "mars"}
         cx="237"
         cy="15.5"
         r="7"

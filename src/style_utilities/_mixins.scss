@@ -1,4 +1,6 @@
-@import "../style_utilities/colors"; //Active link and hover navbar link style
+@import "../style_utilities/colors";
+@import "../style_utilities/animations";
+//Active link and hover navbar link style
 @mixin nav-link-underline {
   content: "";
   height: 0.2rem;
@@ -22,15 +24,57 @@
   }
   //NAVBAR
   .navbar-container {
+    z-index: 100;
     width: 100%;
     justify-content: center;
     color: black;
+
     // position: relative;
     .navbar-items {
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+      transform-origin: top right;
       position: absolute;
       flex-direction: column;
+      right: 8vw;
+      top: 8vh;
+      // opacity: 0;
+      // visibility: hidden;
+      color: white;
+      background: $color-primary;
+      border-radius: 25px 0 25px 25px;
+      overflow: hidden;
+      transform: scale(0);
+      transition: all 0.2s;
       .navbar-item {
-        font-size: 6vw;
+        font-size: 2rem;
+        margin-right: 0;
+        a {
+          display: block;
+          padding: 2vh 2vh;
+          width: 100%;
+
+          &:hover {
+            background: darken($color-primary, 10%);
+          }
+        }
+        &::after {
+          display: none;
+        }
+
+        .item-active {
+          background: darken($color-primary, 10%);
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &.menu-active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
       }
     }
     .navbar-logo {
@@ -40,6 +84,10 @@
       right: 50%;
       transform: translateX(50%);
       font-size: 5vh;
+    }
+    .nav-icon-mobile {
+      opacity: 1;
+      visibility: visible;
     }
   }
   ///

@@ -1,0 +1,6 @@
+.mars {
+  transition: all 0.5s;
+}
+.mars.active {
+  transform: translateY(-2rem);
+}

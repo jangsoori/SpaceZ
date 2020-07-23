@@ -1,4 +1,5 @@
 @import "../style_utilities/mixins";
+@import "../style_utilities/animations";
 .navbar-container {
   display: flex;
   align-items: center;
@@ -39,5 +40,15 @@
     position: absolute;
     right: 1rem;
     top: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 5vh;
   }
+}
+
+.scale-down {
+  animation: scale-down 0.5s forwards;
+}
+.scale-up {
+  animation: scale-up 0.5s forwards;
 }
